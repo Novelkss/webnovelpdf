@@ -14,10 +14,9 @@
   <div id="viewer">Loading novel...</div>
 
   <script>
-    // Step 1: Direct Dropbox EPUB link
-    const epubUrl = "https://www.dropbox.com/scl/fi/cmaezuc719cez5e95wize/Shadow-Slave.epub?rlkey=c3xeijbhwdadvrm2t7vbratlx&st=xujx3wfm&dl=1";
+    // Fixed Dropbox link (using proxy)
+    const epubUrl = "https://api.allorigins.win/raw?url=https://www.dropbox.com/scl/fi/cmaezuc719cez5e95wize/Shadow-Slave.epub?rlkey=c3xeijbhwdadvrm2t7vbratlx&st=xujx3wfm&dl=1";
 
-    // Step 2: Initialize EPUB.js reader
     const book = ePub(epubUrl);
     const rendition = book.renderTo("viewer", {
       width: "100%",
