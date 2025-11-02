@@ -21,7 +21,11 @@
     @media(min-width:420px){.cover{height:200px}}
     @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr);gap:16px};header .title{font-size:20px}}
     footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
-    .reader-btn{display:inline-block;margin-top:8px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:8px;font-size:13px;text-decoration:none}
+
+    /* Ad styles */
+    .ad { background:#fff;border-radius:8px;padding:8px;margin:10px 0;text-align:center;color:#555;box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+    .ad.small { padding:6px;font-size:13px; }
+    .ad.large { padding:12px;font-size:14px; min-height:60px; display:flex; align-items:center; justify-content:center; }
   </style>
 </head>
 <body>
@@ -31,12 +35,19 @@
   </header>
 
   <main class="container">
+
+    <!-- TOP AD PLACEHOLDER -->
+    <div id="ad-top" class="ad large">
+      <!-- Ad provider code will go here later. For now this is a placeholder. -->
+      [Ad Slot — Top Banner]
+    </div>
+
     <div class="section">
       <div class="section-title">Latest novels</div>
 
       <div class="grid">
         <!-- Card 1 -->
-        <div class="card" onclick="location.href='reader.html?file=1XZ-JgKz_Ooz8GWqCijq3hz7PUpbg3a7q'">
+        <div class="card" onclick="location.href='reader.html?file=FILEID_1'">
           <img class="cover" src="https://placehold.co/600x800?text=Novel+1" alt="Novel 1 cover">
           <div class="card-body">
             <p class="title-small">The Lost Kingdom</p>
@@ -53,6 +64,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- MIDDLE AD PLACEHOLDER -->
+    <div id="ad-middle" class="ad small">
+      [Ad Slot — Middle Banner]
     </div>
 
     <div style="height:14px"></div>
@@ -76,8 +92,16 @@
         </div>
       </div>
     </div>
+
+    <!-- BOTTOM AD PLACEHOLDER -->
+    <div id="ad-bottom" class="ad large">
+      [Ad Slot — Bottom Banner]
+    </div>
+
   </main>
 
   <footer>© NovelKSS — mobile reading</footer>
+
+  <!-- NOTE: when you get ad code from an ad network, we'll paste the JS snippet inside the appropriate <div id="ad-top|ad-middle|ad-bottom"> -->
 </body>
 </html>
