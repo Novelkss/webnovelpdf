@@ -1,107 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NovelKSS — Mobile Reading</title>
   <meta name="description" content="NovelKSS — read novels on mobile. Tap a cover to read in the built-in reader." />
   <style>
-    :root{--bg:#ffffff;--muted:#666;--accent:#2563eb;--card-bg:#fbfbfd}
-    html,body{height:100%;margin:0;background:#f3f4f6;font-family:Inter,Segoe UI,Arial,sans-serif;color:#111}
-    header{background:var(--accent);color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
-    header .title{font-weight:700;font-size:18px}
-    .container{padding:12px;max-width:900px;margin:0 auto}
-    .section-title{font-size:16px;margin:6px 0 12px;color:#111;font-weight:600}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .card{background:var(--card-bg);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06);cursor:pointer}
-    .cover{width:100%;height:160px;object-fit:cover;display:block}
-    .card-body{padding:10px}
-    .title-small{font-size:14px;margin:0 0 6px;color:#111;font-weight:600}
-    .tagline{font-size:12px;color:var(--muted);margin:0;line-height:1.3}
-    @media(min-width:420px){.cover{height:200px}}
-    @media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr);gap:16px};header .title{font-size:20px}}
-    footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* Ad styles */
-    .ad { background:#fff;border-radius:8px;padding:8px;margin:10px 0;text-align:center;color:#555;box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-    .ad.small { padding:6px;font-size:13px; }
-    .ad.large { padding:12px;font-size:14px; min-height:60px; display:flex; align-items:center; justify-content:center; }
+    :root {
+      --bg: #ffffff;
+      --accent: #2563eb;
+      --text: #111111;
+      --card-bg: #f9fafb;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .container {
+      padding: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .novel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+    }
+    .novel {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .novel:hover {
+      transform: scale(1.03);
+    }
+    .novel img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .novel-title {
+      padding: 10px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .novel img {
+        height: 160px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="title">NovelKSS 📚</div>
-    <div style="font-size:12px;opacity:.95">Mobile</div>
-  </header>
 
-  <main class="container">
+  <!-- 🔝 Adsterra Top Banner -->
+  <div style="text-align:center; margin:10px 0;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '005484c437a97b9ea3a25f566b01a51c',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/005484c437a97b9ea3a25f566b01a51c/invoke.js"></script>
+  </div>
 
-    <!-- TOP AD PLACEHOLDER -->
-    <div id="ad-top" class="ad large">
-      <!-- Ad provider code will go here later. For now this is a placeholder. -->
-      [Ad Slot — Top Banner]
+  <header>📚 NovelKSS — Read Anytime, Anywhere</header>
+
+  <div class="container">
+    <div class="novel-grid">
+      <a href="reader.html?file=1L_CX8X-QLJc9Pi_plthw51tHd__rJ0R" class="novel">
+        <img src="https://via.placeholder.com/300x400?text=Shadow+Slave" alt="Shadow Slave">
+        <div class="novel-title">Shadow Slave</div>
+      </a>
+      <a href="reader.html?file=novel1.epub" class="novel">
+        <img src="https://via.placeholder.com/300x400?text=Academy+Pervert+D+Class" alt="Academy Pervert D Class">
+        <div class="novel-title">Academy Pervert D Class</div>
+      </a>
     </div>
+  </div>
 
-    <div class="section">
-      <div class="section-title">Latest novels</div>
+  <!-- 🟦 Adsterra Middle Banner -->
+  <div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '005484c437a97b9ea3a25f566b01a51c',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/005484c437a97b9ea3a25f566b01a51c/invoke.js"></script>
+  </div>
 
-      <div class="grid">
-        <!-- Card 1 -->
-        <div class="card" onclick="location.href='reader.html?file=FILEID_1'">
-          <img class="cover" src="https://placehold.co/600x800?text=Novel+1" alt="Novel 1 cover">
-          <div class="card-body">
-            <p class="title-small">The Lost Kingdom</p>
-            <p class="tagline">Adventure · Fantasy</p>
-          </div>
-        </div>
+  <footer>
+    &copy; 2025 NovelKSS. All rights reserved.
+  </footer>
 
-        <!-- Card 2 -->
-        <div class="card" onclick="location.href='reader.html?file=FILEID_2'">
-          <img class="cover" src="https://placehold.co/600x800?text=Novel+2" alt="Novel 2 cover">
-          <div class="card-body">
-            <p class="title-small">Shadows of Time</p>
-            <p class="tagline">Mystery · Thriller</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- 🔻 Adsterra Bottom Banner -->
+  <div style="text-align:center; margin:10px 0;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '005484c437a97b9ea3a25f566b01a51c',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/005484c437a97b9ea3a25f566b01a51c/invoke.js"></script>
+  </div>
 
-    <!-- MIDDLE AD PLACEHOLDER -->
-    <div id="ad-middle" class="ad small">
-      [Ad Slot — Middle Banner]
-    </div>
-
-    <div style="height:14px"></div>
-
-    <div class="section">
-      <div class="section-title">Recommended</div>
-      <div class="grid">
-        <div class="card" onclick="location.href='reader.html?file=FILEID_3'">
-          <img class="cover" src="https://placehold.co/600x800?text=Novel+3" alt="Novel 3 cover">
-          <div class="card-body">
-            <p class="title-small">Heart of Stone</p>
-            <p class="tagline">Romance · Drama</p>
-          </div>
-        </div>
-        <div class="card" onclick="location.href='reader.html?file=FILEID_4'">
-          <img class="cover" src="https://placehold.co/600x800?text=Novel+4" alt="Novel 4 cover">
-          <div class="card-body">
-            <p class="title-small">Echoes</p>
-            <p class="tagline">Sci-Fi · Thriller</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BOTTOM AD PLACEHOLDER -->
-    <div id="ad-bottom" class="ad large">
-      [Ad Slot — Bottom Banner]
-    </div>
-
-  </main>
-
-  <footer>© NovelKSS — mobile reading</footer>
-
-  <!-- NOTE: when you get ad code from an ad network, we'll paste the JS snippet inside the appropriate <div id="ad-top|ad-middle|ad-bottom"> -->
 </body>
 </html>
